@@ -1,0 +1,61 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=wc-settings&tab=shipping",
+  "preferredVersions": {
+    "php": "7.4",
+    "wp": "6.5.5"
+  },
+  "phpExtensionBundles": [
+    "kitchen-sink"
+  ],
+  "steps": [
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "password"
+    },
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "wordpress.org\/plugins",
+        "slug": "woocommerce"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "wordpress.org\/plugins",
+        "slug": "persian-woocommerce"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "wordpress.org\/plugins",
+        "slug": "persian-woocommerce-shipping"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installTheme",
+      "themeZipFile": {
+        "resource": "wordpress.org\/themes",
+        "slug": "storefront"
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "gmt_offset": "3.5",
+        "WPLANG": "fa_IR"
+      }
+    }
+  ]
+}
